@@ -20,15 +20,36 @@ export default function Cal(){
             [name]: value
         }))
     }
-   const [output,setoutput]=React.useState("")
-   const [eng,seteng]=React.useState(0)
+    const [output,setoutput]=React.useState("")
+    const [eng,seteng]=React.useState(0)
+    const [fat,setfat]=React.useState(0)
+    const [pro,setpro]=React.useState(0)
+    const [sug,setsug]=React.useState(0)
+    const [carbs,setcarbs]=React.useState(0)
+     function calculate(){
+        let energy=on.totalNutrients.ENERC_KCAL.quantity;
+        let fat1=on.totalNutrients.FAT.quantity;
+        let protien1=on.totalNutrients.PROCNT.quantity;
+        let sugar1=on.totalNutrients.SUGAR.quantity;
+        let carbs1=on.totalNutrients.CHOCDF.quantity;
+        seteng(eng+ energy)
+        setcarbs(carbs+ carbs1)
+        setsug(sug+ sugar1)
+        setpro(pro+ protien1)
+        setfat(fat+ fat1)
+    }
     function printit(){
-        let ene=on.ENERC_KCAL
-        let dekh=`Energy in Joule :- ${on.ENERC_KCAL} 
-               Fat in g :- ${on.FAT} 
-               Protien in g :${on.PROCNT}`
-        setoutput(dekh)
-       seteng(eng+ ene )
+    let energy=on.totalNutrients.ENERC_KCAL.quantity;
+    let fat1=on.totalNutrients.FAT.quantity;
+    let protien1=on.totalNutrients.PROCNT.quantity;
+    let sugar1=on.totalNutrients.SUGAR.quantity;
+    let carbs1=on.totalNutrients.CHOCDF.quantity;
+        let dekh=`Energy in Joule :- ${energy} 
+               Fat in g :- ${fat1} 
+               Protien in g :${protien1}
+               Sugar in g :${sugar1}
+               Carbohydrate in g :${carbs1}`
+        setoutput(dekh) 
     }
     console.log(eng)
     console.log(val.food)
@@ -51,6 +72,7 @@ export default function Cal(){
             onChange={handleChange}
             />
             <button onClick={printit}>Your micronutients</button>
+            <button onClick={calculate}>ADD</button>
             <div>{output}</div>
             </main>
     )
