@@ -1,4 +1,5 @@
 import React from "react";
+import Table from "./Table";
 
 export default function Cal(){
     const options = {
@@ -10,6 +11,7 @@ export default function Cal(){
     };
     
     const[on,seton]=React.useState([])
+    const[getit,setit]=React.useState("")
     const[val,setval]=React.useState({
         food:""
     })
@@ -27,6 +29,7 @@ export default function Cal(){
     const [sug,setsug]=React.useState(0)
     const [carbs,setcarbs]=React.useState(0)
      function calculate(){
+        setit(val.food)
         let energy=on.totalNutrients.ENERC_KCAL.quantity;
         let fat1=on.totalNutrients.FAT.quantity;
         let protien1=on.totalNutrients.PROCNT.quantity;
@@ -38,6 +41,7 @@ export default function Cal(){
         setpro(pro+ protien1)
         setfat(fat+ fat1)
     }
+    console.log(getit);
     function printit(){
     let energy=on.totalNutrients.ENERC_KCAL.quantity;
     let fat1=on.totalNutrients.FAT.quantity;
@@ -59,21 +63,32 @@ export default function Cal(){
 	.then(response => response.json())
 	.then(response => seton(response))
 	.catch(err => console.error(err));
-}, [val.food])
+}, [getit])
 
 
     return(
         <main>
+            <div className="value">
             <input
+            className="input"
             type="text"
-            placeholder=""
+            placeholder="Enter the Food"
             name="food"
             value={val.food}
             onChange={handleChange}
             />
-            <button onClick={printit}>Your micronutients</button>
-            <button onClick={calculate}>ADD</button>
-            <div>{output}</div>
+            </div>
+            <div className="value">
+            <br />
+            <table>
+            <tr>
+            <th><button onClick={printit} className="final">Your micronutients</button></th>
+            <th><button onClick={calculate} className="add">ADD</button></th>
+            </tr>
+            </table>
+            </div>
+            <br />
+            <Table />
             </main>
     )
 }
