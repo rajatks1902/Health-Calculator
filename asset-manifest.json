@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Health-Calculator/static/css/main.86288f4f.css",
+    "main.js": "/Health-Calculator/static/js/main.55cf5834.js",
+    "index.html": "/Health-Calculator/index.html",
+    "main.86288f4f.css.map": "/Health-Calculator/static/css/main.86288f4f.css.map",
+    "main.55cf5834.js.map": "/Health-Calculator/static/js/main.55cf5834.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86288f4f.css",
+    "static/js/main.55cf5834.js"
+  ]
+}
