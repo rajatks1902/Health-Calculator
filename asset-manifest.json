@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/Health-Calculator/static/css/main.86288f4f.css",
-    "main.js": "/Health-Calculator/static/js/main.895a39c1.js",
+    "main.css": "/Health-Calculator/static/css/main.891b2cc1.css",
+    "main.js": "/Health-Calculator/static/js/main.fbae5ce2.js",
+    "static/media/back.jpg": "/Health-Calculator/static/media/back.bdca8b3de768cf316f72.jpg",
+    "static/media/bodyback.jpg": "/Health-Calculator/static/media/bodyback.1fe44c83dab456afa711.jpg",
     "index.html": "/Health-Calculator/index.html",
-    "main.86288f4f.css.map": "/Health-Calculator/static/css/main.86288f4f.css.map",
-    "main.895a39c1.js.map": "/Health-Calculator/static/js/main.895a39c1.js.map"
+    "main.891b2cc1.css.map": "/Health-Calculator/static/css/main.891b2cc1.css.map",
+    "main.fbae5ce2.js.map": "/Health-Calculator/static/js/main.fbae5ce2.js.map"
   },
   "entrypoints": [
-    "static/css/main.86288f4f.css",
-    "static/js/main.895a39c1.js"
+    "static/css/main.891b2cc1.css",
+    "static/js/main.fbae5ce2.js"
   ]
 }
