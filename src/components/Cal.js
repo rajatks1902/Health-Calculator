@@ -81,7 +81,7 @@ export default function Cal(){
             <input
             className="input"
             type="text"
-            placeholder="Enter the Food"
+            placeholder="Enter the Ingredient"
             name="food"
             value={val.food}
              onChange={handleChange}
@@ -90,7 +90,7 @@ export default function Cal(){
             <div className="value">
             <br />
             <table>
-            <tr>
+            <tr >
             <th><button onClick={printit} className="final">fetch</button></th>
             <th><button onClick={calculate}  className="add">ADD </button></th>
             </tr>

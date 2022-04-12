@@ -4,30 +4,30 @@ export default function Table(props){
     return(
         <main  className="value">
            <table className="table1">
-               <tr>
-               <th>micronutients</th>
+               <tr className="black">
+               <th>Micronutients</th>
                <th>Value</th>
                <th>Unit</th>
                </tr>
                <tr>
-                <td>Calories</td>
-                <td>{props.eng}</td>
-                <td>Kcal</td>
+                <td className="hover">Calories</td>
+                <td className="hover">{props.eng}</td>
+                <td className="hover">Kcal</td>
                </tr>
                <tr>
-                <td>Protien</td>
-                <td>{props.pro}</td>
-                <td>Gram</td>
+                <td className="hover" >Protien</td>
+                <td  className="hover">{props.pro}</td>
+                <td className="hover">Gram</td>
                </tr>
                <tr>
-                <td>Fat</td>
-                <td>{props.fat}</td>
-                <td>Gram</td>
+                <td className="hover" >Fat</td>
+                <td className="hover">{props.fat}</td>
+                <td className="hover">Gram</td>
                </tr>
                <tr>
-                <td>Carbohydrate</td>
-                <td>{props.carbs}</td>
-                <td>Gram</td>
+                <td className="hover">Carbohydrate</td>
+                <td className="hover">{props.carbs}</td>
+                <td className="hover">Gram</td>
                </tr>
            </table>
         </main>
