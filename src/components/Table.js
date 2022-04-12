@@ -11,22 +11,22 @@ export default function Table(props){
                </tr>
                <tr>
                 <td>Calories</td>
-                <td>0</td>
+                <td>{props.eng}</td>
                 <td>Kcal</td>
                </tr>
                <tr>
                 <td>Protien</td>
-                <td>0</td>
+                <td>{props.pro}</td>
                 <td>Gram</td>
                </tr>
                <tr>
                 <td>Fat</td>
-                <td>0</td>
+                <td>{props.fat}</td>
                 <td>Gram</td>
                </tr>
                <tr>
                 <td>Carbohydrate</td>
-                <td>0</td>
+                <td>{props.carbs}</td>
                 <td>Gram</td>
                </tr>
            </table>
